@@ -1,0 +1,21 @@
+import Image from 'next/image'
+import React from 'react'
+
+const ThumnailStory = () => {
+  return (
+    <div>
+       <div className="min-w-[56px] min-h-[56px] cursor-pointer transition duration-200 ease-out md:h-56 md:min-w-[56px]">
+          <div className="w-32 h-32 conic-gradient relative rounded-full">
+            <img
+              src="https://instagram.fdad2-1.fna.fbcdn.net/v/t51.2885-19/274635628_124479156807277_4492911370477050647_n.jpg?stp=dst-jpg_s150x150&_nc_ht=instagram.fdad2-1.fna.fbcdn.net&_nc_cat=1&_nc_ohc=7ZzeGPkmiI4AX-DF4wh&edm=ANmP7GQBAAAA&ccb=7-5&oh=00_AT86cV13iioGzaZidKdGIsy_7hQivQslxf2Mcu2SoSTt9g&oe=62C7DB81&_nc_sid=276363"
+              className="
+              alt=""
+            />
+          </div>
+          <p className="cursor-pointer text-xs text-[#333] transition duration-200">_dieulinh16_</p>
+        </div>
+    </div>
+  )
+}
+
+export default ThumnailStory

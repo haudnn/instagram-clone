@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer components {
+    .conic-gradient:after {
+        display: block;
+        border-radius: 9999px;
+        content: '';
+        width: 108%;
+        height: 108%;
+        position: absolute;
+        z-index: -1;
+        left: -4%;
+        top: -4%;
+        background: radial-gradient(rgba(0,0,0,0.15) 60% , transparent 0) , radial-gradient(white 65%, transparent 0 ), linear-gradient(to top right, orange, deeppink);
+      }
+    .img-circle::after {
+      border: 1px solid rgba(var(--web-always-black), .0975);
+      border-radius: 50%;
+      bottom: 0;
+      content: '';
+      left: 0;
+      pointer-events: none;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .flex-0-auto{
+      flex: 0 0 auto;
+    }
+    .bg-modal{
+      background-color: rgba(0,0,0,0.3);
+    }
+    .calc-height-modal {
+      max-height:calc(100vh - 40px);
+      max-width: calc(100% - 64px - 64px);
+    }
+    .aspect-img{
+      max-height: 881px;
+      max-width: 660.8px;
+      aspect-ratio: 660.8 / 881;
+      flex-basis: 660.8px;
+    }
+    .bg-position{
+      background-position: -162px -98px
+    }
+
+}

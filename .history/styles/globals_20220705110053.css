@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer components {
+    .conic-gradient:after {
+        display: block;
+        border-radius: 9999px;
+        content: '';
+        width: 108%;
+        height: 108%;
+        position: absolute;
+        z-index: -1;
+        left: -4%;
+        top: -4%;
+        background: radial-gradient(rgba(0,0,0,0.15) 60% , transparent 0) , radial-gradient(white 65%, transparent 0 ), linear-gradient(to top right, orange, deeppink);
+      }
+}
