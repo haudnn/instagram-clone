@@ -1,0 +1,1 @@
+export const selectIsLogging$ = (state: any) => state.auth.loading

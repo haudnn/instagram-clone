@@ -1,0 +1,1 @@
+const baseURI = process.env.BASE_URL
