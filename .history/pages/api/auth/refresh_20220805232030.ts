@@ -10,16 +10,22 @@ interface JwtPayload {
     id: string
 }
 export default async (req:Request, res:Response) => {
+    switch(req.method){
+        case "POST":
+            await login(req,res)
+            break;
+    }
+}
+
+const refreshToken = async (req:Request, res:Response) => {
     try{
         const rf_token = req.cookies.refreshtoken;
-        if(!rf_token) return res.status(400).json({err: 'Please login now!'})
+        if(!rf_token) return res.status(401).json({message: 'Refresh token has expired'})
 
         const result = jwt.verify(rf_token, process.env.REFRESH_TOKEN_SECRET || "") as JwtPayload
-        if(!result) return res.status(400).json({err: 'Your token is incorrect or has expired.'})
+        if(!result) return res.status(403)
 
         const user = await userModel.findById(result.id)
-        if(!user) return res.status(400).json({err: 'User does not exist.'})
-
         const access_token = createAccessToken({id: user._id})
         res.json({
             access_token,
